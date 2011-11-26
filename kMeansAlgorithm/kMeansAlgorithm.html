@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> k-Means algorithm </title>
+<style>
+body {
+	background-color:#FFFFFF;
+}
+canvas { 
+	border: 3px solid gray;
+}
+</style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script type="text/javascript" src="kMeansAlgorithm.js"></script>
+  </head>
+  <body>
+    <canvas id="canvasElem"><p>Your browser doesn't support canvas :(</p></canvas>
+	<div>
+		Click on the canvas to place new <input type="button" id="buttonSwitchDataOrClusterCenter" value="">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" id="buttonRemoveDataPoints" value="Remove data points">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" id="buttonRemoveClusterCenters" value="Remove cluster centers">
+		<br/>
+		Iteration:
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" id="buttonAssociateDataToCC" value="1. Associate data to cluster centers">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" id="buttonMoveCC" value="2. Move cluster centers to the center of the associated cluster">
+		<br/>
+		<input type="button" id="buttonRemoveCCwithNoData" value="Remove cluster centers that have no associated data points">
+	</div>
+    <script type="text/javascript">
+	$(document).ready(function() { initialize(); });
+	</script>
+  </body>
+</html>
