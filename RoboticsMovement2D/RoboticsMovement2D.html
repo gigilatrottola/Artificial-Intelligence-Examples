@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Robotics: movement on a plane </title>
+<style>
+body {
+	background-color:#FFFFFF;
+}
+canvas { 
+	border: 3px solid gray;
+}
+</style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script type="text/javascript" src="RoboticsMovement2D.js"></script>
+  </head>
+  <body>
+	<table>
+	<tr>
+		<td>
+			<canvas id="canvasElem"><p>Your browser doesn't support canvas :(</p></canvas>
+		</td>
+		<td>
+		Fill in the values of angle, velocity and angular velocity, then
+		click on the canvas to place the moving object: <br/>
+		angle = <input type="text" id="angle" value="45"> degrees <br/>
+		velocity = <input type="text" id="velocity" value="25"> pixels/sec <br/>
+		angle velocity = <input type="text" id="angle_vel" value="10"> degrees/sec <br/>
+		step interval time = <input type="text" id="interval_time" value="1"> seconds <br/>
+		X = <input type="text" id="x" readonly> <br/>
+		Y = <input type="text" id="y" readonly> <br/>
+		<input type="button" id="buttonStep" value="Step"> <br/>
+		</td>
+	</table>
+    <script type="text/javascript">
+	$(document).ready(function() { initialize(); });
+	</script>
+  </body>
+</html>
