@@ -58,7 +58,7 @@ sub letter_bigram_sampling
 
   # read the text file used for sampling
   # file: http://www.gutenberg.org/cache/epub/1342/pg1342.txt ( The Project Gutenberg EBook of Pride and Prejudice, by Jane Austen )
-  open(CORPUS, "pg1342.txt") or die("Cannot open corpus file"); 
+  open(CORPUS, "../../pg1342.txt") or die("Cannot open corpus file"); 
   while(my $line = <CORPUS>) {
     #print "$line";
     my @letters = split('', lc($line));
